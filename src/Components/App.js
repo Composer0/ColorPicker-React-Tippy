@@ -3,6 +3,7 @@ import './App.css';
 
 import {BlockPicker} from 'react-color';
 import Tippy from '@tippyjs/react';
+import "tippy.js/animations/perspective.css";
 
 
 
@@ -17,13 +18,13 @@ function App() {
 
       </div>
 
-    <Tippy interactive={true} placement={'bottom'} content={
+    <Tippy trigger={"click"} interactive={true} animation={"perspective"} placement={'bottom'} content={
       <BlockPicker
         color={selectedColor}
         onChangeComplete={color => setSelectedColor(color.hex)}
       />
     }>
-      <button className='ref-button'>Change Box Color</button>
+      <button className='ref-button'>Click to Change Box Color</button>
     </Tippy>
     </div>
   );
