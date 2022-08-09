@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 
-import {BlockPicker} from 'react-color';
+import {CirclePicker} from 'react-color';
 import Tippy from '@tippyjs/react';
 import "tippy.js/animations/perspective.css";
 
@@ -19,7 +19,7 @@ function App() {
       </div>
 
     <Tippy trigger={"click"} interactive={true} animation={"perspective"} placement={'bottom'} content={
-      <BlockPicker
+      <CirclePicker
         color={selectedColor}
         onChangeComplete={color => setSelectedColor(color.hex)}
       />
